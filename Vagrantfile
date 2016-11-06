@@ -8,7 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |data|
   data.vm.network "private_network", ip: "10.10.10.10"
   data.librarian_chef.cheffile_dir = "dataes"
   data.vm.provision "chef_solo" do |dataes|
-    dataes.cookbooks_path = "chef/cookbooks"
+    dataes.cookbooks_path = "data/cookbooks"
     dataes.add_recipe "apt"
     dataes.add_recipe "java"
     dataes.add_recipe "elasticsearch"
