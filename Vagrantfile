@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |data|
   data.vm.box = "ubuntu/trusty64"
   data.vm.network "private_network", ip: "10.10.10.10"
-  data.librarian_chef.cheffile_dir = "chef"
+  data.librarian_chef.cheffile_dir = "data"
   data.vm.provision "chef_solo" do |chef|
     chef.cookbooks_path = "data/cookbooks"
     chef.add_recipe "apt"
