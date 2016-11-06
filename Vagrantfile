@@ -6,13 +6,13 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |data|
   data.vm.box = "ubuntu/trusty64"
   data.vm.network "private_network", ip: "10.10.10.10"
-  data.librarian_chef.cheffile_dir = "dataes"
-  data.vm.provision "chef_solo" do |dataes|
-    dataes.cookbooks_path = "data/cookbooks"
-    dataes.add_recipe "apt"
-    dataes.add_recipe "java"
-    dataes.add_recipe "elasticsearch"
-    dataes.json = {
+  data.librarian_chef.cheffile_dir = "chef"
+  data.vm.provision "chef_solo" do |chef|
+    chef.cookbooks_path = "data/cookbooks"
+    chef.add_recipe "apt"
+    chef.add_recipe "java"
+    chef.add_recipe "elasticsearch"
+    chef.json = {
       "java" => {
         "jdk_version" => "8"
       },
