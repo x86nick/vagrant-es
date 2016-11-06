@@ -3,3 +3,4 @@ site "http://community.opscode.com/api/v1"
 cookbook 'apt', git: 'https://github.com/opscode-cookbooks/apt'
 cookbook 'java', git: 'https://github.com/agileorbit-cookbooks/java'
 cookbook 'apache', git: 'https://github.com/svanzoest-cookbooks/apache2'
+cookbook 'sonarqube', git: 'https://github.com/christianewillman/sonarqube'
